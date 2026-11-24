@@ -15,7 +15,7 @@ class GameSession extends Model
         'played_at' => 'datetime',
     ];
 
-    /** @return BelongsTo<Campaign, GameSession> */
+    /** @return BelongsTo<Campaign, $this> */
     public function campaign(): BelongsTo
     {
         return $this->belongsTo(Campaign::class);

@@ -9,7 +9,7 @@ class Quest extends Model
 {
     protected $fillable = ['campaign_id', 'title', 'summary', 'status'];
 
-    /** @return BelongsTo<Campaign, Quest> */
+    /** @return BelongsTo<Campaign, $this> */
     public function campaign(): BelongsTo
     {
         return $this->belongsTo(Campaign::class);
