@@ -9,6 +9,7 @@ class Character extends Model
 {
     protected $fillable = ['campaign_id', 'name', 'description'];
 
+    /** @return BelongsTo<Campaign, Character> */
     public function campaign(): BelongsTo
     {
         return $this->belongsTo(Campaign::class);
