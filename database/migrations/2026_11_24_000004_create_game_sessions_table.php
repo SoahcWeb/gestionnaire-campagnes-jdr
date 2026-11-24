@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('game_sessions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('campaign_id')
-                  ->constrained('campaigns')
-                  ->cascadeOnDelete();
+                ->constrained('campaigns')
+                ->cascadeOnDelete();
             $table->dateTime('played_at');
             $table->text('notes')->nullable();
             $table->timestamps();

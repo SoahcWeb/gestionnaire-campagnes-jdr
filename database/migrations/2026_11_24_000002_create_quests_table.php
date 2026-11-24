@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('quests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('campaign_id')
-                  ->constrained('campaigns')
-                  ->cascadeOnDelete();
+                ->constrained('campaigns')
+                ->cascadeOnDelete();
             $table->string('title');
             $table->text('summary')->nullable();
             $table->enum('status', ['proposed', 'saved'])->default('proposed');

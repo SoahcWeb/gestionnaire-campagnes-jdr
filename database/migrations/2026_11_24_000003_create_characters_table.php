@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
             $table->foreignId('campaign_id')
-                  ->constrained('campaigns')
-                  ->cascadeOnDelete();
+                ->constrained('campaigns')
+                ->cascadeOnDelete();
             $table->string('name');
             $table->text('description')->nullable();
             $table->timestamps();
