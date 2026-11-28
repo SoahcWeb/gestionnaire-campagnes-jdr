@@ -4,7 +4,7 @@ Application de gestion de campagnes de jeu de rôle avec génération de quêtes
 
 ## Prérequis
 
-- PHP 8.3 ou supérieur, avec les extensions requises par Laravel
+- PHP 8.4 ou supérieur, avec les extensions requises par Laravel
 - Composer
 - Node.js et npm
 - SQLite (base de données utilisée par défaut)
